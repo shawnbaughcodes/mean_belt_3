@@ -1,0 +1,25 @@
+<h2>Registration</h2>
+<div>
+    <p ng-repeat='error in UC.registration_errors'>{{ error }}</p>
+    <form ng-submit='UC.create(UC.newUser)' method="post">
+        First Name:
+        <input type="text" ng-model='UC.newUser.first_name'>
+        Last Name:
+        <input type="text" ng-model='UC.newUser.last_name'>
+        Email:
+        <input type="text" ng-model='UC.newUser.email'>
+        Password:
+        <input type="text" ng-model='UC.newUser.password'>
+        <input type="submit"  value="Submit">
+    </form>
+</div>
+
+<h2>Login</h2>
+<p ng-repeat='error in UC.login_errors'>{{error}}</p>
+<form ng-submit='UC.login(UC.loginUser)' method="post">
+    Email:
+    <input type="text" ng-model='UC.loginUser.email'>
+    Password:
+    <input type="text" ng-model='UC.loginUser.password'>
+    <input type="submit" value="Submit">
+</form>

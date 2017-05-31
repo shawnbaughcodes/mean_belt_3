@@ -1,0 +1,16 @@
+<div ng-init='UC.session()'>
+    <a href="#" ng-click='UC.logout()'><button>Logout</button></a>
+    <a href="#!/create">Create New Poll</a>
+    <h2>Current Polls:</h2>
+    <div ng-controller='SurveysController as SC' ng-init='SC.index()'>
+        <input type="text" ng-model="SC.filter_name">
+        <p ng-repeat="s in SC.surveys | filter: SC.filter_name track by $index">
+            <a href="#!/poll/{{s._id}}">
+                {{s.question}} | {{s.createdAt}} |
+                <span ng-if="s._id != UC.current_user.surveys">
+                    <a href="#" ng-click="SC.delete(s._id)">Delete</a>
+                </span>
+            </a>
+        </p>
+    </div>
+</div>

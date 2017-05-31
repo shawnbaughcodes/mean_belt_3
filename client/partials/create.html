@@ -1,0 +1,19 @@
+<div ng-init=UC.session()>
+    <h1>Put Question and Options here:</h1>
+    <div ng-controller='SurveysController as SC'>
+        <p ng-repeat='error in SC.survey_errors track by $index'>{{error}}</p>
+        <form ng-submit='SC.create(SC.newSurvey)'>
+            Question:
+            <input type="text" ng-model='SC.newSurvey.question'>
+            Option 1:
+            <input type="text" ng-model='SC.newSurvey.option1.option'>
+            Option 2:
+            <input type="text" ng-model='SC.newSurvey.option2.option'>
+            Option 3:
+            <input type="text" ng-model='SC.newSurvey.option3.option'>
+            Option 4:
+            <input type="text" ng-model='SC.newSurvey.option4.option'>
+            <input type="submit" value="Create Poll">
+        </form>
+    </div>
+</div>

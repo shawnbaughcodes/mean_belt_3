@@ -1,0 +1,13 @@
+<div ng-init='UC.session()'>
+    <div ng-controller='SurveysController as SC' ng-init='SC.show()'>
+        <a href="#!/dashboard">Go to Polls</a>
+        <h1>{{SC.survey.question}}</h1>
+        <p>{{SC.survey.option1.option}} | {{SC.survey.option1.vote}} | <button ng-click="SC.update('option1')">Vote</button></p>
+
+        <p>{{SC.survey.option2.option}} | {{SC.survey.option2.vote}} | <button ng-click="SC.update('option2')">Vote</button></p>
+
+        <p>{{SC.survey.option3.option}} | {{SC.survey.option3.vote}} | <button ng-click="SC.update('option3')">Vote</button></p>
+
+        <p>{{SC.survey.option4.option}} | {{SC.survey.option4.vote}} | <button ng-click="SC.update('option4')">Vote</button></p>
+    </div>
+</div>

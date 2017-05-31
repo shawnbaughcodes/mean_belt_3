@@ -1,0 +1,22 @@
+{
+  "name": "login_reg_ng_cookies",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "codyw9524 <codyw9524@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-cookies": "^1.6.4"
+  }
+}
